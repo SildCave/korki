@@ -33,3 +33,12 @@ print("kox2: " + kox1)
 kox = '*' * 10
 print(kox)
 
+kwadrat = """
+*****
+*   *
+*****
+" "
+"""
+print(kwadrat)
+
+print(" \"")
