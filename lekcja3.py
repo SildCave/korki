@@ -215,4 +215,3 @@ if not warunek:
     print('ok')
 
 
-    
