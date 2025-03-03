@@ -126,13 +126,13 @@ for liczba in liczby:
 print('\n\n\n')
 
 
-czarna_liczba = 20
+unikana_liczba = 20
 liczby = [1, 6, 8, 18, 19, 20, 100, 55, 64]
 
 print(f"liczby: {liczby}\nszukana: {szukana_liczba}")
 
 for liczba in liczby:
-    if liczba == czarna_liczba:
+    if liczba == unikana_liczba:
         continue
 
     print(f"liczba: {liczba}")
