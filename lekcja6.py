@@ -66,13 +66,13 @@ print(f"liczby: {liczby}")
 A = {1, 2, 3, 4}
 B = {3, 4, 5, 6}
 
-print(A | B) # <= SUMA
+print(A | B) # <= SUMA {1, 2, 3, 4, 5, 6}
 
-print(A & B) # <= CZ WSP
+print(A & B) # <= CZesc WSPolna {3, 4}
 
-print(A - B) # <= RONICA
+print(A - B) # <= RONICA {1, 2}
 
-print(A ^ B) # <= wywala wspolne
+print(A ^ B) # <= wywala wspolne {1, 2, 5, 6}
 
 
 zdanie = 'Ala ma kota , kota ma Ala'
