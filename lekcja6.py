@@ -81,3 +81,6 @@ words = set(zdanie.split())
 
 print(f"words: {words}")
 
+# deklaracja pustego
+
+nowy_set = set([])
