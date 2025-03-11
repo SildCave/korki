@@ -1,0 +1,41 @@
+Napisz program
+
+Bedzie przechowywal imiona wiek i oceny uczniow
+pokazywal jakie sa imiona ogolnie
+pokazywal srednia ocen ucznia i wszystkich uczniow
+pozwalal userowi aktualizowac imiona i wiek uczniow majac imie ucznia
+pozwalal na dodawanie oceny uczniowi
+pokazywal wszystkich uczniow i danych z nimi zwiazanymi
+mial mozliwosc opuszczenia programu
+
+
+1: Bedzie przechowywal imiona wiek i oceny uczniow
+uczen = {
+    imie,
+    wiek,
+    oceny: []
+}
+baza_danych = [uczen]
+
+2: pokazywal jakie sa imiona ogolnie
+baza_imion = set()
+
+3: pokazywal srednia ocen ucznia
+sum(oceny) / len(oceny)
+
+4: pokazywal srednia wszystkich ocen uczniow
+biersze srednie wsyzstkich uczniow, sumuje i dzieli na liczbe uczniow
+
+5: pozwalal userowi aktualizowac imiona i wiek uczniow majac imie ucznia i jego wiek
+czyli bierzemy imie i for loopujemy
+
+6: pozwalal na dodawanie oceny uczniowi majac jego imie
+bierzemy imie, i dodajemy ocene do listy ocen tego ucznia
+
+7: pokazywal wszystkich uczniow i danych z nimi zwiazanymi
+ladnie printuje wszystkich uczniow uzywajac for loopa
+
+8: mial mozliwosc opuszczenia programu
+jezeli input "exit" to konczy
+
+9: umozliwal dodanie ucznia
