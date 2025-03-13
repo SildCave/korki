@@ -42,6 +42,7 @@ while True:
         baza_danych.append(uczen)
         print(f'Uczen o imieniu {imie} i wieku {wiek} został dodany!')
 
+
     elif nr_komendy == 2:
         baza_imion = set()
         for uczen in baza_danych:
@@ -53,6 +54,50 @@ while True:
             print(imie, ', ', end='', sep='')
 
         print('\n')
+    # 3 | Średnia Ocen Ucznia
+    elif nr_komendy == 3:
+        baza_imion = set()
+        for uczen in baza_danych:
+            imie = uczen['imie']
+            baza_imion.add(imie)
+
+        imie_ucznia = input("Podaj imię ucznia, któremu chcesz dodać ocenę: ")
+        while imie_ucznia not in baza_imion:
+            print(f'Imię {imie_ucznia} nie znajduje się w bazie danych')
+            imie_ucznia = input("Podaj Poprawne Imię: ")
+
+        for uczen in baza_danych:
+            imie = uczen['imie']
+            if imie == imie_ucznia:
+                print(f"Średnia ocen ucznia {imie} wynosi {sum(uczen['oceny']) / len(uczen['oceny'])}")
+
+    elif nr_komendy == 6:
+        imie_ucznia = input("Podaj imię ucznia, któremu chcesz dodać ocenę: ")
+        nowa_ocena = input("Podaj ocenę, którą chcesz dodać: ")
+
+        ocena_jest_liczba = nowa_ocena.isdigit()
+
+        baza_imion = set()
+        for uczen in baza_danych:
+            imie = uczen['imie']
+            baza_imion.add(imie)
+
+        while not ocena_jest_liczba:
+            print('Ocena To Liczba')
+            nowa_ocena = input("Podaj ocenę, którą chcesz dodać: ")
+            ocena_jest_liczba = nowa_ocena.isdigit()
+            if ocena_jest_liczba:
+                nowa_ocena = int(nowa_ocena)
+
+        while imie_ucznia not in baza_imion:
+            print(f'Imię {imie_ucznia} nie znajduje się w bazie danych')
+            imie_ucznia = input("Podaj Poprawne Imię: ")
+
+        for uczen in baza_danych:
+            imie = uczen['imie']
+            if imie == imie_ucznia:
+                uczen["oceny"].append(int(nowa_ocena))
+                print(f"Dodano uczniowi {imie_ucznia} ocenę {nowa_ocena}")
 
     elif nr_komendy == 7:
         print("\nWszyscy Uczniowie:")
