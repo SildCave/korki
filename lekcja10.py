@@ -39,6 +39,6 @@ def reverse_string(tekst):
 print(reverse_string("kwiat"))
 # kwiat len(kwiat) = 5
 # index = len(kwiat) -1
-# odworcone = [None * (len(kwiat) -1)]
+# odworcone = [None * (len(kwiat))]
 # for znak in tekst => odworcone[index] = znak
 
