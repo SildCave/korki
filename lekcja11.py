@@ -73,3 +73,13 @@ os.rename('trol.mvk', 'trol.mp4')
 
 os.remove('trol.mp4')
 
+import datetime
+
+data_i_godzina = datetime.datetime.now()
+wpis = input("Wprowadź notatkę: ")
+
+with open('Notatka.txt', "a") as file:
+    file.write(f"{data_i_godzina.strftime("%x"), data_i_godzina.strftime("%X")} {wpis}\n")
+
+print("Pomyślnie dodano notatkę!")
+
