@@ -86,12 +86,12 @@ class Uczen:
 
     @staticmethod
     def ze_stringa(dane_ucznia):
+        # dane_studenta = 'kasia, 12111'
         imie = dane_studenta.split(', ')[0]
-        wiek = int(dane_studenta.split(', ')[0])
+        wiek = int(dane_studenta.split(', ')[1])
+        return Uczen(imie, wiek)
 
-
-dane_studenta = 'kasia, 12'
-
+print('\n\n\n')
 student1 = Uczen('kasia', 12)
 student2 = Uczen('karol', 76)
 
@@ -99,6 +99,14 @@ baza_danych = []
 baza_danych.append(student1)
 baza_danych.append(student2)
 
+print(baza_danych)
+szukany_uczen = 'karol'
+
+for uczen in baza_danych:
+    if uczen.name == szukany_uczen:
+        print(uczen.pokaz_studenta())
+
+print('\n\n\n')
 
 student1.pokaz_studenta()
 
@@ -107,3 +115,8 @@ print(Uczen.nazwa_szkoly)
 Uczen.zmien_szkole(nowa_szkola="10000 lo w jodłowie")
 print(Uczen.nazwa_szkoly)
 
+dane_studenta = 'kasia, 12111'
+uczen_z_danych = Uczen.ze_stringa(dane_studenta)
+print('\n\n\n')
+
+uczen_z_danych.pokaz_studenta()
