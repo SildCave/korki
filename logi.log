@@ -1,3 +1,7 @@
 2025-03-20 20:50:19,174 - root - INFO - zainicjowano logowanie
 2025-03-20 20:50:20,793 - root - INFO - nie ma żadnego błędu
 2025-03-20 20:50:20,793 - root - DEBUG - program skonczyl pracowac
+INFO:root:wczytal se baze danych z xd.txt
+INFO:root:wczytal se baze danych z xd.txt
+INFO:root:ktos se dodal ucznia Xd, 112, 12 i chuj
+ERROR:root:Debil dal zly plik wiec wypierdala

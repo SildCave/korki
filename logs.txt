@@ -1,0 +1,2 @@
+ERROR:root:podana baza danych nie istnieje
+ERROR:root:podana baza danych nie istnieje
