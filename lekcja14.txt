@@ -1,0 +1,11 @@
+INTEGER = pythonowy int, licba całkowita
+REAL = to jest float aka liczba z przecinkiem
+TEXT = czyli po prostu string z pythona
+BLOB = to sa po prostu bajty czyli cokolwiek
+NULL = reprezentuja wartosci ktorych nie ma tak jak w pythonie (None) czyli "NIC"
+
+PRIMARY KEY = "głowny klucz" ktory jest unikatowy dla kazdego obiektu
+NOT NULL = czyli nie moze byc niczym
+UNIQUE = unikatowy
+CHECK = spraawdza czy przy wpisywaniu danych do tabeli wszystko sie zgadza np: age INTEGER CHECK (age > 0)
+DEFAULT = domysklan wartosc kolumny: wynagrodzenie REAL DEFAULT 30,50

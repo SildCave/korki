@@ -120,3 +120,9 @@ uczen_z_danych = Uczen.ze_stringa(dane_studenta)
 print('\n\n\n')
 
 uczen_z_danych.pokaz_studenta()
+
+xd = 10
+xd = None
+
+print(bool(1))
+print(bool(0))
