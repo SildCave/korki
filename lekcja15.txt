@@ -1,0 +1,48 @@
+CREATE TABLE users (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	age INTEGER CHECK (age > 0),
+	email TEXT UNIQUE NOT NULL
+)
+
+INSERT INTO products (name, price, stock) VALUES
+('Laptop', 3000.0, 48),
+('Telefon', 3000.0, 48),
+('Smartwatc', 3000.0, 48),
+
+
+SELECT name, id FROM users
+
+SELECT * FROM users WHERE age > 21
+
+SELECT * FROM users ORDER BY age DESC
+
+SELECT * FROM users LIMIT 2
+
+SELECT COUNT(*) FROM users
+
+SELECT SUM(price) FROM products
+
+SELECT AVG(price) FROM products
+
+SELECT category, COUNT(*) FROM products GROUP BY category
+
+
+CREATE TABLE orders (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	user_id INTEGER,
+	product_id INTEGER,
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+SELECT products.price, users.age
+FROM orders
+JOIN users ON orders.user_id = users.id
+JOIN products ON orders.product_id = products.id
+
+SELECT name FROM users WHERE age >
+(SELECT AVG(age) FROM users)
+
+
+CREATE INDEX idx_users_email ON users(email)  INDEX SPRAWIA ZE CZYTANIE JEST AJEBISCIE SZYBKIE ALE PISANIE JEST KOZACKO WOLNE

@@ -25,3 +25,6 @@ VALUES ('Kasia', 11, 'kasia@skibid.xd');
 UPDATE users SET age = 16 WHERE name = 'Lucjan';
 
 DELETE FROM users WHERE name = 'Kasia';
+
+
+

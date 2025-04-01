@@ -217,7 +217,7 @@ while True:
 
         print('\n')
 
-        
+
     elif nr_komendy == 9:
         print("wypierdalaj")
         break

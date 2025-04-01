@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="kox.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1262"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="0" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="orders" custom_title="0" dock_id="1" table="4,6:mainorders"/><table title="users" custom_title="0" dock_id="2" table="4,5:mainusers"/><dock_state state="000000ff00000000fd0000000100000002000004d30000030ffc0100000001fc00000000000004d30000014900fffffffa000000010100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000014900fffffffb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000014900ffffff000002b90000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="orders" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="49"/><column index="2" value="57"/><column index="3" value="78"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="products" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="49"/><column index="2" value="110"/><column index="3" value="114"/><column index="4" value="146"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="53"/><column index="2" value="49"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="users" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="49"/><column index="2" value="53"/><column index="3" value="49"/><column index="4" value="169"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">CREATE TABLE products (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	price REAL NOT NULL,
+	stock INTEGER NOT NULL,
+	category TEXT NOT NULL
+);</sql><sql name="SQL 2*">INSERT INTO products (name, price, stock, category) VALUES
+('Laptop', 3000.0, 48, 'elektronika'),
+('Telefon', 3000.0, 48, 'elektronika'),
+('Smartwatch', 3000.0, 48, 'elektronika'),
+('Kawa', 40.0, 220, 'napoj'),
+('Herbata', 20.0, 200, 'napoj'),
+('Japko', 2.0, 4800, 'owoce')</sql><sql name="SQL 3*">CREATE TABLE orders (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	user_id INTEGER,
+	product_id INTEGER,
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (product_id) REFERENCES products(id)
+	);
+</sql><sql name="SQL 4*">INSERT INTO orders (user_id, product_id) VALUES
+(1, 3),
+(3, 4),
+(2, 5)
+</sql><sql name="SQL 5*">SELECT products.price, users.age
+FROM orders
+JOIN users ON orders.user_id = users.id
+JOIN products ON orders.product_id = products.id
+</sql><sql name="SQL 6*">SELECT name FROM users WHERE age &gt;
+(SELECT AVG(age) FROM users)</sql><sql name="SQL 7*">CREATE INDEX idx_users_email ON users(email)</sql><current_tab id="0"/></tab_sql></sqlb_project>
