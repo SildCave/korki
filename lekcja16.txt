@@ -1,0 +1,18 @@
+[20:50]SildCave: 1: polacz tabele customers i orders filtruj po customer_id
+[20:52]SildCave: chcemy order_id, customer_id i order date w outpucie
+[20:53]SildCave: gdzie imie customera to Alice
+[21:05]SildCave: polacz tabele orderDetails i produkty i znajdz itemki z cena i iloscia tego co zamowili w zamowieniu nr 1 
+[21:07]SildCave: x
+
+nazwa produktu | cena | ilosc
+miał                      0.99    200
+myszka                    28       3 
+[21:22]SildCave: znajdz ziomow co mysz kupili, chcemy ich imie, id ordera i order_date
+[21:32]SildCave: znajdz ile lacznie produktow jest w orderze nr 3 i zprintuj id tego ordera i ilosc produktow
+[21:33]SildCave: i nr 1
+[21:42]SildCave: zznajdz produkt z najwieksza iloscia sprzedana
+[21:42]SildCave: MAX
+[21:43]SildCave: nazwa, ilosc
+[21:46]SildCave: myszy jest 3 nie 4
+[21:48]SildCave: 20
+[21:48]SildCave: jutro
